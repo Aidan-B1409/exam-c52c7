@@ -1,11 +1,8 @@
-class TailPack
+require_relative 'cargo'
+class TailPack < Cargo
 
-def initialize
-  @cost = 2 # Flat rate per rental
-end
-
-def cost
-  @cost
-end
+  def initialize
+    super(2)
+  end
 
 end

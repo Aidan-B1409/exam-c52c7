@@ -1,36 +1,27 @@
 require_relative 'tail_pack'
+require_relative 'bike'
 
-class BmxBike
+
+class BmxBike < Bike
+
+  WEEKLY_PRICE = 70
+  DAILY_PRICE = 20
+  HOURLY_PRICE = 5
 
   def initialize
-    @tail_pack = TailPack.new
-    @weekly_price = 70
-    @daily_price = 20
-    @hourly_price = 5
+    super(cargo: TailPack.new,
+          weekly_price: WEEKLY_PRICE,
+          daily_price: DAILY_PRICE,
+          hourly_price: HOURLY_PRICE)
   end
 
-  def clean
-    puts "Cleaning..."
+  def prepare_bike
+    super()
+    adjust_seat()
   end
 
   def adjust_seat
     puts "Adjusting seat..."
-  end
-
-  def tail_pack
-    @tail_pack
-  end
-
-  def weekly_rate
-    @weekly_price
-  end
-
-  def daily_rate
-    @daily_price
-  end
-
-  def hourly_rate
-    @hourly_price
   end
 
 end

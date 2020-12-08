@@ -1,34 +1,9 @@
+require_relative 'cargo'
 
-
-class Pannier
+class Pannier < Cargo
 
   def initialize
-    @price = 3 # Set price. Flat rate per rental
+    super(3)
   end
 
-
-  # Get price
-  def price
-    @price
-  end
-
-  end
-
-
-
-  # def weight
-  #   @weight
-  # end
-
-
-
-
-
-
-
-
-
-
-
-
-
+end

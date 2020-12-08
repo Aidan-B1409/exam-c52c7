@@ -1,10 +1,9 @@
-class RollPack
-  # Set price
+require_relative 'cargo'
+
+class RollPack < Cargo
+
   def initialize
-  @price = 1 # Flat rate per rental
+    super(1)
   end
-  # Get price
-  def price
-  @price # Price set in initializer
-  end
+
 end
